@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <a href="#">Link A</a>
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
+  <a href="#">Link 4</a>
+  <button class="btn">Click Me</button>
+</body>
+<script>
+  const btn = document.querySelector(".btn")
+  const links = document.querySelectorAll("a")
+  console.log(links)
+  btn.addEventListener("click",()=>{
+    alert(`Number of Links in the page is ${links.length}\nFirst Link is ${links[0].textContent}\nLast Link is ${links[links.length-1].textContent}`)
+    
+  })
+</script>
+</html>
