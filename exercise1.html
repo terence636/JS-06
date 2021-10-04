@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=utf-8 />
+    <title>JS DOM paragraph style</title>
+  </head> 
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+      
+      .changeStyle {
+        color: red;
+        font-family: "Cedarville Cursive",sans-serif ;
+        font-size: 3rem;
+      }
+    </style>
+  <body>
+    <p id="text">JavaScript Exercises #1</p> 
+    <div>
+      <button id="jsstyle" onclick="js_style()">Style</button>
+    </div>
+  </body>
+
+  <script>
+    const pEle = document.querySelector("#text")
+    const js_style = (e) =>{
+      pEle.classList.toggle("changeStyle")
+      console.log("Hi")
+    }
+    
+  </script>
+</html>
