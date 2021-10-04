@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+  .bg-green {
+    background-color: green;
+    display: inline-block
+  }
+</style>
+<body>
+    <div class="header">
+    </div>
+    <section id="container">
+        <ul>
+            <li class="first">one</li>
+            <li class="second">two</li>
+            <li class="third">three</li>
+        </ul>
+        <ol>
+            <li class="first">one</li>
+            <li class="second">two</li>
+            <li class="third">three</li>
+        </ol>
+    </section>
+    <div class="footer">
+    </div>
+</body>
+<script>
+  // 1&2
+  const contA = document.getElementById("container")
+  const contB = document.querySelector("#container")
+  // 3
+  const secondItems = document.querySelectorAll(".second")
+  // 4
+  const thirdChild = document.querySelector("ol").querySelector(".third")
+  thirdChild.classList.add("bg-green")
+
+  // 5
+  const text = document.createElement("h1")
+  text.textContent = "hello"
+  contB.prepend(text)
+  // 6
+  const footer = document.querySelector(".footer")
+  footer.classList.add("main")
+  // 7
+  footer.classList.remove("main")
+  //8,9,10
+  const newLi = document.createElement("li")
+  newLi.textContent = "four"
+  // console.log(newLi)
+  const ul = document.querySelector("ul")
+  // console.log(ul)
+  ul.appendChild(newLi)
+  //Challenge
+  const ol = document.querySelector("ol")
+  const olChild = ol.children
+  console.log(olChild)
+  olChild.forEach(child=>{
+    child.classList.add("bg-green")
+  })
+</script>
+</html>
