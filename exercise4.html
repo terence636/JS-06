@@ -7,7 +7,7 @@
 <style>
   .bg-green {
     background-color: green;
-    display: inline-block
+    /* display: inline-block */
   }
 </style>
 <body>
@@ -54,12 +54,16 @@
   const ul = document.querySelector("ul")
   // console.log(ul)
   ul.appendChild(newLi)
-  //Challenge
+  // Challenge
+  // 1
   const ol = document.querySelector("ol")
   const olChild = ol.children
-  console.log(olChild)
-  olChild.forEach(child=>{
-    child.classList.add("bg-green")
-  })
+  console.log(olChild[0])
+  for(let child of olChild) {
+      child.classList.add("bg-green")
+  }
+  // 2
+  footer.remove()
+  
 </script>
 </html>
